@@ -1,0 +1,76 @@
+.custom-scrollbar {
+  position: relative;
+}
+
+.custom-scrollbar_draggable {
+  cursor: grab;
+  user-select: none;
+}
+
+.custom-scrollbar_dragging {
+  cursor: grabbing;
+}
+
+.custom-scrollbar__mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.custom-scrollbar__content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Работает в Firefox */
+.custom-scrollbar__content {
+  scrollbar-width: none;
+}
+
+/* Работает в Chrome, Edge и Safari */
+.custom-scrollbar__content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.custom-scrollbar__track-x,
+.custom-scrollbar__track-y {
+  position: absolute;
+  background-color: transparent;
+  cursor: auto;
+  user-select: none;
+}
+
+.custom-scrollbar__track-x {
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 15px);
+  height: 15px;
+}
+
+.custom-scrollbar__track-y {
+  top: 0;
+  right: 0;
+  height: calc(100% - 15px);
+  width: 15px;
+}
+
+.custom-scrollbar__thumb-x,
+.custom-scrollbar__thumb-y {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.custom-scrollbar__thumb-x {
+  width: 50px;
+  height: 100%;
+}
+
+.custom-scrollbar__thumb-y {
+  height: 50px;
+  width: 100%;
+}
